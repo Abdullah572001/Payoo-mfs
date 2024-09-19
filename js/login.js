@@ -4,10 +4,20 @@
 document.getElementById('btn-login').addEventListener('click', function(event){
         // step-2
         event.preventDefault();
-        console.log('clicked hoyache');
 
         // step-3
         const phoneNumber = document.getElementById('phone-number').value;
-        console.log(phoneNumber);
-        
+        const pinnumber = document.getElementById('pin-number').value;
+
+        // console.log(phoneNumber, pinnumber);
+
+        // step-4
+        if (phoneNumber === '5' && pinnumber === '1234') {
+            console.log('You are logged in');
+            // step-5
+            window.location.href = '/home.html';
+        }
+        else{
+            alert('wrong phone number or pin')
+        }
     })
