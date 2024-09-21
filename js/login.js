@@ -12,7 +12,7 @@ document.getElementById('btn-login').addEventListener('click', function(event){
         // console.log(phoneNumber, pinnumber);
 
         // step-4
-        if (phoneNumber === '5' && pinnumber === '1234') {
+        if (phoneNumber === 'Bondhon' && pinnumber === '1234') {
             console.log('You are logged in');
             // step-5
             window.location.href = './home.html';
