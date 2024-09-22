@@ -8,8 +8,17 @@ document.getElementById('btn-cash-out')
         const balance = document.getElementById('account-balance').innerText;
         const balanceNumber = parseFloat(balance);
 
+        if (isNaN(cashOutNumber)) {
+            alert ('Failed to cash out!');
+            return;
+        }
+
         const pinNumberInput = document.getElementById('cash-out-pin').value;
         if (pinNumberInput === '1234') {
+            if (cashOutNumber > balanceNumber) {
+                alert('You do not have enough money to cash out');
+                return;
+            }
             const newBalance = balanceNumber - cashOutNumber;
 
             document.getElementById('account-balance').innerText = newBalance;

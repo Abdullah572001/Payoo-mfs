@@ -6,6 +6,11 @@ document.getElementById('btn-add-money')
         const addMoneyInput = document.getElementById('input-add-money').value;
         const pinNumberInput = document.getElementById('input-pin-number').value;
 
+        if (isNaN(addMoneyInput)) {
+            alert ('Failed to add money!');
+            return;
+        }
+
         if (pinNumberInput === '1234') {
             console.log('adding money in your account');
 
